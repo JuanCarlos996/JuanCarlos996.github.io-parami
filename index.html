@@ -5,17 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/estilos.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
 
     <title>Proyecto CV</title> 
 </head>
 <body>
+    
     <header>
+        <h1> Vega Juan Carlos - CV</h1>
         <div id="superior">
-            <h1>  CV-Vega Juan Carlos  </h1> 
-            <img src="C:\Users\Juan Carlos\OneDrive\Documentos\Argentina Programa.Desarrollo web\Proyecto Final\imagenes\mt.jpg" alt="TEXTO QUE APARECE SI NO CARGA CORRECTAMENTE LA IMAG" 
-    height="80px" width="80px"/>
-        </div> 
+            <img src="C:\Users\Juan Carlos\OneDrive\Documentos\Argentina Programa.Desarrollo web\Proyecto Final\imagenes\puente2.jpg" alt="No puede cargar img" width="100%" height="4%">
+            <img class="img2" src="C:\Users\Juan Carlos\OneDrive\Documentos\Argentina Programa.Desarrollo web\Proyecto Final\imagenes\perfil.jpg" alt="No se puede cargar img perfil" style="width:10%" >
+         </div>
+        
        
     </header>
 
@@ -23,9 +29,9 @@
     <nav id="contenedor" >
         
         <h2> Mi nombre es Juan Carlos, soy estudiante de 3er año de Ing. en Sistemas de Inf. Vivo en la ciudad  de Resistencia Chaco. Actualmente me desempeño como Analista de Producción en Retak, un empresa constructora de Ladrillos Hormigon. Mi actividad diaria es, la carga de producción en un Sistema ERP (ISIS), seguimiento de requerimientos de parte de Logistica, control de puestos, carga de planillas en Sheets para un posterior analisis, extracción de datos de PLC, encargado de la implementación y capacitación de Sis. de producción, entre otras actividades. Mi anterior experiencia laborar fue como Analista en Sis. en Laborario de analisis clinicos (Güemes) en el cual actuaba como soporte de hardware de fallas de primer nivel, instalación de nueva pcs, correos internos, control de servidor ya sea fisico, como de los Backup, entre otras actividades. </h2>    
-        <p> Cursos Desarrollados </p>
+        <p2> Cursos Desarrollados </p2>
         <ul>
-        <li>Desarrollo web </li>
+        <li>Desarrollo web </li> 
         <li>Programación web con JavaScript </li>
         <li>Software Tester-QA</li>
         <li>Diseño Web Responsive- HTML5 y CSS3</li>
@@ -34,22 +40,22 @@
         <li>Introducción a la programación</li>
         </ul>
 
-        <p2> Experiencias laborales </p2>
-        <ul>
-            <li> Analista de Producción - Retak (02/2022-Actualidad) </li>
-            <li> Analista en Sistemas - Laboratorio Güemes (10/2021-01/2022)</li>
-            <li> Representante de Atención al cliente - Apex (08/2019-02/2022) </li>
-            <li> Encuestador - CYSNA Consultora (02/2019-07/2019)</li>
+        <h3  > Experiencias laborales </h3>
+        <ul id="experiencias">
+            <p style="float:left" > Analista de Producción - Retak (02/2022-Actualidad) </p>
+            <p style="float:right"> Analista en Sistemas - Laboratorio Güemes (10/2021-01/2022)</p>
+            <p style="float:left"> Representante de Atención al cliente - Apex (08/2019-02/2022) </p>
+            <p style="float:right"> Encuestador - CYSNA Consultora (02/2019-07/2019)</p>
 
 
         </ul>
-         
-
-        
+            <div id="Conocimientos">
             <h3> Conocimientos </h3>
+           
             <ul>
+                <div class="erp">
             <li><label for="file">ERP (ISIS)   </label>
-                <progress id="file" max="100" value="80"> 80% </progress></li>
+                <progress id="file" max="100" value="80"> 80% </progress></li></div>
             <li><label for="file"> JavaScript </label>
                 <progress id="file" max="100" value="70"> 70% </progress></li>
             <li><label for="file"> CSS </label>
@@ -75,9 +81,10 @@
             <li><label for="file"> Python </label>
                 <progress id="file" max="100" value="70"> 70% </progress></li>
             </ul> 
+            </div>
           
 
-            <canvas id="myChart" style="width:100%; max-width:600px ; margin: right 90px;"></canvas>
+            <canvas id="myChart" style="width:100%; max-width:600px ; margin: right 90px; "></canvas>
 
             <script>
             var xValues = ["ERP (ISIS)", "JavaScript", "CSS", "HTML", "VeamBackup", "Microsoft Office", "Google     Sheets", "Autocad","SQL","Python", "C", "Git", "Python"];
@@ -90,7 +97,7 @@
                 labels: xValues,
                 datasets: [{
                   backgroundColor: barColors,
-                  data: yValues 
+                  data: yValues
                 }]
               },
               options: {
